@@ -1,0 +1,63 @@
+const replies = {
+    correct: [
+        "Okay, not bad. Even a broken clock is right twice.",
+        "Congrats. You did the bare minimum. ✨",
+        "Correct… but I still don’t trust you.",
+        "You live to guess another day.",
+        "Wow. You’re smarter than you look. Marginally.",
+        "Mitsuri is proud. For now.",
+        "Correct. But don’t get used to it. 😌",
+        "You got it right? I need to lie down.",
+        "Mitsuri blinked twice. That’s praise.",
+        "Congrats. Your neurons finally touched.",
+        "Finally. A correct answer. Took you long enough.",
+        "Even a blind squirrel finds a nut sometimes.",
+        "You passed... barely. Like scraping a C- with grace.",
+        "Correct! Who are you and what have you done with the last guy?",
+        "Oh look, someone’s been Googling.",
+        "Your ancestors are clapping. Softly. Out of pity."
+    ],
+    fakeCorrect: [
+        "It *felt* right, didn’t it? Just like all your bad decisions.",
+        "Almost. But this isn’t horseshoes or love.",
+        "You chose the fake bait. Deliciously wrong.",
+        "Nice try, but no. The universe disagrees.",
+        "Your confidence is admirable. Your answer? Not so much.",
+        "Close. Emotionally. Not logically.",
+        "You picked the one that *sounded* right. Classic rookie move.",
+        "Confidence ≠ Competence. This proves it.",
+        "Wrong... but in such a committed way.",
+        "You were so wrong, I almost respected the effort.",
+        "This isn’t a vibes-based quiz, darling.",
+        "Oh sweetie… that was the *loud wrong* kind of answer.",
+        "It looked right. Like all toxic exes.",
+        "You picked the bait. The trap card has been activated.",
+        "If boldness was a skill, you’d ace this. Unfortunately, this is IQ.",
+        "You’re not wrong. You’re just… not right."
+    ],
+    wrong: [
+        "Wrong. Like your entire tech career.",
+        "Did you study at YouTube University?",
+        "That answer gave Mitsuri psychic damage.",
+        "No. Just no. Stop clicking things.",
+        "You’re getting dumber per question. Impressive.",
+        "Wrong again. I'm calling HR.",
+        "You answered? Bold of you to try. 💀",
+        "Your brain just filed for divorce.",
+        "Even Mitsuri’s pink hair is disappointed.",
+        "That answer made my React app crash from shame.",
+        "That’s not an answer. That’s an insult to logic.",
+        "Your IQ just got nerfed. Hard.",
+        "You’re playing checkers in a chess tournament.",
+        "Incorrect. But iconic. In a tragic way.",
+        "Your neurons took a coffee break mid-click.",
+        "No worries, failure builds character. You’ll be very strong soon.",
+        "This is why you get ghosted by recruiters.",
+        "The compiler wept.",
+        "404: Brain not found.",
+        "Not just wrong. Historically wrong.",
+        "This answer belongs in `/dev/null`."
+    ]
+};
+
+export default replies;
