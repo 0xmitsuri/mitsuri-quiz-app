@@ -14,7 +14,7 @@ const HomePage = () => {
     }
 
     return (
-        <div className='flex flex-col items-center justify-center min-h-screen w-full px-4 sm:px-6 lg:px-8 relative'>
+        <div className='flex flex-col items-center justify-center min-h-screen w-full px-4 sm:px-6 lg:px-8 relative bg-background'>
             <div className='w-full z-20 max-w-3xl space-y-2 flex flex-col justify-center items-center'>
                 <h1 className='text-2xl sm:text-4xl lg:text-5xl text-center font-bold'>Welcome to Mitsuri's IQ Test</h1>
                 <p className='text-xs sm:text-sm lg:text-md text-center px-12 md:px-32'>Before we begin judging your intelligence, tell us your <b>name</b>. Don't worry, it won't help your score 😌</p>
