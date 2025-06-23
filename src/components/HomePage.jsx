@@ -29,7 +29,7 @@ const HomePage = () => {
                     disabled={username.length === 0}
                     className="w-1/2"
                 >
-                    Start Quiz
+                    {localStorage.getItem("iq") ? "Take Quiz Again" : "Start Quiz "}
                 </Button>
             </div>
 
