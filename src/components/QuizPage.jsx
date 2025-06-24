@@ -36,13 +36,12 @@ const QuizPage = () => {
                 localStorage.setItem("tenQuestions", JSON.stringify(randomTenQuestions));
             }
 
-            // Load IQ score from localStorage if available
             const storedIq = localStorage.getItem("iq");
             const storedIqLabel = localStorage.getItem("iqLabel");
             if (storedIq && storedIqLabel) {
                 setIq(storedIq);
                 setIqLabel(storedIqLabel);
-                setShowIQModal(true); // Show the IQ modal if results are stored
+                setShowIQModal(true);
             }
         }
 
@@ -51,6 +50,11 @@ const QuizPage = () => {
 
     const handleStartQuiz = () => {
         setQuizStarted(true);
+        setCorrectAnswers(0);
+        setFakeCorrectAnswers(0);
+        setQuizCompleted(false);
+        setIq(null);
+        setIqLabel('');
     }
 
     const calculateIQ = (correctAnswers, fakeCorrectAnswers) => {
@@ -61,15 +65,14 @@ const QuizPage = () => {
     }
 
     const getIQLabel = (iq) => {
-        if (iq >= 140) return "🥵 Giga Brain. Mitsuri swoons.";
-        if (iq >= 120) return "🧠 Actually smart. Unexpected.";
-        if (iq >= 100) return "😐 Passable. You're okay. Barely.";
-        if (iq >= 80) return "😬 Mid-tier braincell performance.";
-        if (iq >= 60) return "😭 Did you eat paint as a kid?";
-        return "🫠 A walking, talking memory leak.";
-    }
+        if (iq >= 140) return "🥵 Giga Brain. Mitsuri's blushing AND scared.";
+        if (iq >= 120) return "🧠 Actually smart. Who let you cook?";
+        if (iq >= 100) return "😐 Barely functional. Like a React app with no hooks.";
+        if (iq >= 80) return "😬 That was... brave. Not smart. Just brave.";
+        if (iq >= 60) return "😭 Were you homeschooled by Internet Explorer?";
+        return "🫠 You are the reason semicolons drink.";
+    };
 
-    // Function to handle the evaluation of answers and update the parent state
     const onAnswerEvaluation = (isCorrect, isFakeCorrect) => {
         if (isCorrect) {
             setCorrectAnswers((prev) => prev + 1);
@@ -84,12 +87,11 @@ const QuizPage = () => {
         setIq(calculatedIq);
         setIqLabel(label);
 
-        // Save the result to localStorage
         localStorage.setItem("iq", calculatedIq);
         localStorage.setItem("iqLabel", label);
 
         setQuizCompleted(true);
-        setShowIQModal(true); // Show the IQ result modal after quiz completion
+        setShowIQModal(true);
     }
 
     const closeIQModal = () => {

@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from './ui/button';
 
 const IQResultModal = ({ iq, iqLabel, onClose }) => {
-    const twitterShareUrl = `https://twitter.com/intent/tweet?text=Hey%2C+I+got+${iq}+on+Mitsuris+IQ+Test+Check+out+this+quiz%21+%F0%9F%91%89%F0%9F%8F%BC`;
+    const twitterShareUrl = `https://twitter.com/intent/tweet?text=Hey%2C+I+got+${iq}+on+Mitsuri's+IQ+Test!+Check+out+this+chaotic+quiz+%F0%9F%91%89%F0%9F%8F%BC+https%3A%2F%2Fmitsuri-quiz-app.vercel.app%2F`;
 
     return (
         <div className="fixed inset-0 backdrop-blur-2xl bg-opacity-50 flex items-center justify-center z-50">

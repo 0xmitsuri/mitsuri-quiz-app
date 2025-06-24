@@ -7,10 +7,12 @@ const HomePage = () => {
     const [username, setUsername] = useState('')
     const navigate = useNavigate()
 
-    const handleSumit = () => {
-        localStorage.setItem("username", username)
-        navigate("/quiz")
-        console.log('Starting quiz for:', username)
+    const startQuiz = () => {
+        localStorage.removeItem("iq");
+        localStorage.removeItem("iqLabel");
+        localStorage.setItem("username", username);
+        navigate("/quiz");
+        console.log('Starting quiz for:', username);
     }
 
     return (
@@ -25,7 +27,7 @@ const HomePage = () => {
                     className="w-1/2 mt-6"
                 />
                 <Button
-                    onClick={handleSumit}
+                    onClick={startQuiz}
                     disabled={username.length === 0}
                     className="w-1/2"
                 >
