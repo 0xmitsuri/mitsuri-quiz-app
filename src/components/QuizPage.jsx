@@ -5,7 +5,7 @@ import TimerComponent from './TimerComponent'
 import { Button } from "@/components/ui/button"
 import questions from '@/data/questions'
 import IQResultModal from './IQResultModal' // Import the IQResultModal component
-import { Carousel, CarouselContent, CarouselItem } from './ui/carousel'
+import { Carousel, CarouselContent, CarouselIndicator, CarouselItem, CarouselNavigation } from './ui/carousel'
 import { useNavigate } from 'react-router-dom'
 
 const QuizPage = () => {
@@ -126,6 +126,10 @@ const QuizPage = () => {
                             >
                                 Finish Quiz
                             </Button>
+                        </div>
+                        <div className="flex flex-col items-center gap-3 sm:gap-4 mt-4 sm:mt-6">
+                            <CarouselNavigation alwaysShow />
+                            <CarouselIndicator />
                         </div>
                     </Carousel>
                 )}
